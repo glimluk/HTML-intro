@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fåglar</title>
 </head>
+
 <body>
 
     <h1>Fåglar</h1>
@@ -32,10 +34,10 @@
     </ol>
 
     <hr>
-    
-    <!-- Ibland vill man skapa ett innehåll i en lista som hanterar flera rader... -->
 
-    <ul>
+    <!-- Ibland vill man skapa ett innehåll i en lista som hanterar flera rader av text -->
+
+    <ol>
         <li>
             <!-- en rubrik -->
             <h3>Koltrast</h3>
@@ -45,19 +47,60 @@
             </p>
         </li>
         <li>
-            <!-- en rubrik -->
             <h3>Stare</h3>
-            <!-- en tillhörande text -->
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt sed ullam saepe numquam officiis fugit dignissimos corporis dolores vel facilis inventore, cum, maiores odit libero, ab aliquid assumenda ea corrupti?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt sed ullam saepe numquam officiis
+                fugit dignissimos corporis dolores vel facilis inventore, cum, maiores odit libero, ab aliquid assumenda
+                ea corrupti?
             </p>
         </li>
+    </ol>
 
-        <!-- OBS! - koda inte så här... (ett ul element måste följas av ett li element...) -->
-        <!-- <h3>
-            <li>En fågel</li>
-        </h3>
-    </ul> -->
+    <!-- en lista kan ha flera olika nivåer -->
+    <!-- se först om ni kan hitta hur man skapa en sådan lista -->
+    <hr>
+
+    <ol>
+        <li>Sparvar
+            <ol>
+                <li>Gråsparv
+                    <ul>
+                        <li>I staden</li>
+                        <li>På landet</li>
+                        <li>Utanför mitt cafe</li>
+                    </ul>
+                </li>
+                <li>Gulsparv</li>
+            </ol>
+        </li>
+        <li>Finkar
+            <ol>
+                <li>Grönfink</li>
+                <li>Svartpink</li>
+                <li>Blåfink</li>
+            </ol>
+        </li>
+        <li>Mesar
+            <ol>
+                <li>Svartmes</li>
+            </ol>
+        </li>
+    </ol>
+
+
+    <!-- lägga till olika typer av medieinnehåll, ex bild, ljud, video -->
+
+    <h3>Om koltrasten</h3>
+    <p>
+        Så låter Turdus merula
+    </p>
+    <!-- ett ljudklipp från en koltrast -->
+    <!-- ett ljud kan spela med elementet audio -->
+    <!-- ett exempel på en relativ sökväg -->
+    <!-- OBS - för att få ´spelkontroller´ till audio elementer anges attributet ´controls´ -->
+    <audio src="audio/Turdus_merula_-_Common_Blackbird_XC541784.mp3" controls></audio>
+
 
 </body>
+
 </html>
