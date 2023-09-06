@@ -29,9 +29,12 @@
 
 
     <!-- elementet form används för att skapa formulär - olika fält -->
-    <!-- method post -->
-    <!-- method get -->
-    <form action="#" method="post">
+    <!-- method post - ska användas så långt som möjligt - med extension Live server genereras ett http 405 fel tyvärr...-->
+    <!-- method get - ska undvikas, men kan användas för att testa applikationen. OBS - input type="password" skickas ut klartext = väldigt tråkigt...!!! -->
+    <form action="#" method="get">
+
+
+        <!-- vissa fält kan man göra till obligatoriska - attributet required -->
 
         <p>
             <!-- ett element som är tänkt att vara ledtext till formulärfält är label -->
@@ -44,7 +47,118 @@
             <input type="text" name="last_name" id="last_name">
         </p>
 
-       
+        <p>
+            <!-- alternativt sätt att använda label element utan för attribut -->
+            <!-- se https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label -->
+            <label>Ange e-post: <br>
+                <input type="email" name="email" id="email" required>
+            </label>
+        </p>
+
+        <p>
+            <!-- önskat användarnamn... username, med attributet placeholder kan man eventuellt skippa text -->
+            <!-- ange att fältet är obligatorisk - attributet required -->
+            <!-- fältets längd: minst ex 4 tecken  -->
+            <input type="text" name="username" id="username" placeholder="Ditt användarnamn" required minlength="4"
+                maxlength="20">
+        </p>
+
+        <!-- testa att skapa 2 olika fält som inte har samma type som vi kodat -->
+
+        <p>
+            <label for="color">Ange färg:</label><br>
+            <input type="color" name="color" id="color">
+        </p>
+
+        <p>
+            <label for="check">check?</label>
+            <input type="checkbox" name="c" id="c">
+        </p>
+
+        <p>
+            <label for="date">När födds du:</label><br>
+            <input type="date" name="d" id="d">
+        </p>
+
+        <p>
+            <label for="tid">Vilken tid:</label><br>
+            <input type="time" name="tid" id="tid">
+        </p>
+
+        <!-- <p>
+            <label for="week">En gång till:</label><br>
+            <input type="week" name="week" id="week">
+        </p> -->
+
+        <p>
+            <label for="file">Ange klassificerad dokument (minst 5):</label> <br>
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+            <input type="file" name="fil" id="fil">
+        </p>
+
+        <p>
+            <label for="phone number">Ange mobilnummer (call you maybe?):</label><br>
+            <input type="number" name="number" id="number">
+        </p>
+
+        <p>
+            <label for="radio">Insert aux-kabel:</label>
+            <input type="radio" name="radio" id="radio">
+        </p>
+
+        <p>
+            <label for="range">Hur mycket är för mycket?</label>
+            <input type="range" name="range" id="range">
+        </p>
+
+        <p>
+            <label for="Webbsida">Din webbsida:</label><br>
+            <input type="url" name="b" id="m" placeholder="Ange URL">
+        </p>
+
+
+        <p>
+            <label for="password">Ange lösenord:</label><br>
+            <input type="password" name="password" id="password">
+        </p>
+
+
+        <!-- ett formulärelement som tillåter större textmängd (inkl radbrytning) -->
+
+        <p>
+            Berätta om dig själv - personligt brev<br>
+            <textarea name="letter" id="leter" cols="30" rows="10"></textarea>
+        </p>
+
+        <!-- ett element som används för att peka ut nåt i en list - kallas för select-option -->
+
+        <p>
+            Vilka språk föredrar du: (du kan markera flera val i listan) <br>
+
+            <!-- uppgift - ta reda på om man kan markera flera olika val i select option lista -->
+            <!-- tips: sök mdn html select option -->
+
+            <select name="languages" id="languages" multiple size="3">
+                <option value="HTML">HTML - HyperText Markup Language</option>
+                <option value="swedish">Svenska</option>
+                <option value="english">Engelska</option>
+                <option value="secret">Rövarspråket</option>
+
+            </select>
+        </p>
+
+
+        <input type="reset" value="Reset">
 
         <input type="submit" value="Skicka">
 
